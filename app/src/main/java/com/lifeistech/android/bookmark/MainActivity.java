@@ -17,6 +17,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     ListView mListView;
+    private String[] mStrings = {"TAG A","TAG B","TAG C","TAG D"};
 
 
     @Override
@@ -30,7 +31,11 @@ public class MainActivity extends AppCompatActivity {
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                TAGA data = (TAGA) parent.getItemAtPosition(position);
+                //change DB(TAG.A~D) according to clicked position
+                if (position == 0){TAGA data = (TAGA) parent.getItemAtPosition(position);}
+                else if (position == 1){TAGB data = (TAGB) parent.getItemAtPosition(position);}
+                else if (position == 2){TAGC data = (TAGC) parent.getItemAtPosition(position);}
+                else {TAGD data = (TAGD) parent.getItemAtPosition(position);}
                 Intent i = new Intent(MainActivity.this, MemoDetailActivity.class);
                 i.putExtra("data", data.date);
                 startActivity(i);
@@ -66,10 +71,10 @@ public class MainActivity extends AppCompatActivity {
 
     void setTAGList() {
         List<MemoDB> memoList = new Select().from(MemoDB.class).execute();
-        ArrayAdapter<MemoDB> adapter = new ArrayAdapter<>(
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(
                 getApplicationContext(),
                 R.layout.tag_list,
-                memoList
+                mStrings
         );//MainActivity >> <TAG> >> <DB> >> <TAGlist> >> here.
 
         mListView.setAdapter(adapter);
