@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                MemoDB data = (MemoDB) parent.getItemAtPosition(position);
+                TAGA data = (TAGA) parent.getItemAtPosition(position);
                 Intent i = new Intent(MainActivity.this, MemoDetailActivity.class);
                 i.putExtra("data", data.date);
                 startActivity(i);

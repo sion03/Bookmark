@@ -8,17 +8,9 @@ import com.activeandroid.annotation.Table;
  * Created by sion on 2/25/2016.
  */
 public class TAG {
-    int[] tagArraya;
-    int[] tagArrayb;
-    int[] tagArrayc;
-    int[] tagArrayd;
-
-    tagArraya = new int[10];
-    tagArrayb = new int[10];
-    tagArrayc = new int[10];
-    tagArrayd = new int[10];
+    int[] tagArraya = new int[10];
+    int[] tagArrayb = new int[10];
+    int[] tagArrayc = new int[10];
+    int[] tagArrayd = new int[10];
 
 }
-
-
-
