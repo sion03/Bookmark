@@ -30,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="New CheckBox"
-            android:id="@+id/check_a"
+            android:id="@+id/check_A"
             android:layout_row="0"
             android:layout_column="0" />
 
@@ -38,7 +38,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="New CheckBox"
-            android:id="@+id/check_b"
+            android:id="@+id/check_B"
             android:layout_row="1"
             android:layout_column="0" />
 
@@ -46,7 +46,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="New CheckBox"
-            android:id="@+id/check_c"
+            android:id="@+id/check_C"
             android:layout_row="3"
             android:layout_column="0" />
 
@@ -54,7 +54,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="New CheckBox"
-            android:id="@+id/check_d"
+            android:id="@+id/check_D"
             android:layout_row="4"
             android:layout_column="0" />
 

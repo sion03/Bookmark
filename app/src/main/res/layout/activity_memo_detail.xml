@@ -32,24 +32,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="New CheckBox"
-            android:id="@+id/check_a" />
+            android:id="@+id/check_da" />
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="New CheckBox"
-            android:id="@+id/check_b" />
+            android:id="@+id/check_db" />
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="New CheckBox"
-            android:id="@+id/check_c" />
+            android:id="@+id/check_dc" />
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="New CheckBox"
-            android:id="@+id/check_d" />
+            android:id="@+id/check_dd" />
     </LinearLayout>
 </RelativeLayout>

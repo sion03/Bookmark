@@ -11,6 +11,9 @@ import com.activeandroid.annotation.Table;
 @Table(name = "memo_table")
 public class MemoDB extends Model {
 
+    @Column(name = "bookmark_id")
+    public long bookmarkId;
+
     @Column(name = "title")
     public String title;
 

@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
                 else if (position == 2){TAGC data = (TAGC) parent.getItemAtPosition(position);}
                 else {TAGD data = (TAGD) parent.getItemAtPosition(position);}
                 Intent i = new Intent(MainActivity.this, MemoDetailActivity.class);
-                i.putExtra("data", data.date);
+//                i.putExtra("data", data.date);
                 startActivity(i);
             }
             });

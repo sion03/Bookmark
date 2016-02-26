@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.CheckBox;
 import android.widget.EditText;
 
@@ -15,6 +16,7 @@ import java.util.Locale;
 public class MemoCreateActivity extends AppCompatActivity {
 
     MemoDB mMemoDB;
+    TAG mTAG;
     EditText mTitle;
     EditText mURL;
     CheckBox mtagA;
@@ -33,20 +35,27 @@ public class MemoCreateActivity extends AppCompatActivity {
         mURL = (EditText) findViewById(R.id.create_url);
 
         //CheckboxArea-TagA　※完成次第、他tagについても複製,DetailActivityについても複製
-        mtagA = (CheckBox) findViewById(R.id.check_a);
+        mtagA = (CheckBox) findViewById(R.id.check_A);
             //if the box checked
-            //mtagA.setChecked(true);
-            //mtagA.setOnClickListener(new View.OnClickListener()){
-            //set to tagA's array.
-            //@Override
-            //public void tagA(){
-                //※未記入
-            //}
-        //};
+            mtagA.setChecked(true);
+            mtagA.setOnClickListener(new View.OnClickListener() {
+                //when checkbox-TAG A clicked.
+                @Override
+                public void onClick(View v) {
+                    CheckBox mtagA = (CheckBox) v;
+//                    //if clicked, then set to tagA's array.
+//                    if (mtagA.isChecked()) {
+//                        mMemoDB.bookmarkId = new tagArraya;
+                    }
+                }
 
-        //new DB.
-        mMemoDB = new MemoDB();
-    }
+                );
+
+
+                //new DB.
+                mMemoDB = new MemoDB();
+                mTAG = new TAG();
+            }
 
 
     //MENUBAR display: menu_memo_create
@@ -93,5 +102,16 @@ public class MemoCreateActivity extends AppCompatActivity {
 
         //save all data.
         mMemoDB.save();
+
+        //get id (start from 1 ...not 0!)
+        mMemoDB.bookmarkId = mMemoDB.getId() + 1 ;
+        //if check_A checked, then set to tagA's array.
+        if (mtagA.isChecked()) {
+            int k = mTAG.tagArraya.length ;
+            int j;
+            for(j=0 ; j<k ;j++){if(mTAG.tagArraya[j]==0)break;}
+            mTAG.tagArraya[j] = mMemoDB.bookmarkId ;
+        }
+
     }
 }
